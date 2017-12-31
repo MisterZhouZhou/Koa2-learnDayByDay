@@ -1,0 +1,37 @@
+// 使用jade模板
+extends layout
+
+block header
+  h1 这是header
+
+block content
+    //-  *******   demo1   *******/
+    //- div(ng-app='')
+    //-   p 名字:
+    //-     input(type='text' ng-model='name')
+    //-   h1 {{name}}
+
+    //- *******   demo2   ******* /
+    //- div(ng-app='' ng-init="firstName='zw'")
+    //-   p 名字:
+    //-     span {{firstName}}
+    //-   p 名字2:  
+    //-     span(ng-bind='firstName')
+
+    //-   div(ng-app='myApp' ng-controller='myCtrl')
+    //-     p 名字:
+    //-       input(type='text' ng-model='name')
+    //-     h1 {{name}}
+
+    div(ng-app='myApp' ng-controller='myCtrl')
+      p 名：
+        input(type='text' ng-model='firstName')
+      p 姓：
+        input(type='text' ng-model='lastName')
+      p 姓名： {{firstName+lastName}}
+
+block footer
+  p footer
+
+block script
+  script(src="/js/page/page1.js")

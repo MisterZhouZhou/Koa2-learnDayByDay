@@ -1,0 +1,97 @@
+// 使用jade模板
+extends layout
+
+block css
+  link(rel='stylesheet', href='/css/style.css')  
+
+block content
+   a.astyle(href='http://www.baidu.com') 百度
+   br
+   a(class='astyle' href='http://www.baidu.com') 百度222
+   //- 列表
+   ul 
+     li Item 1
+     li Item 2
+     li Item 3
+
+   //-   checkbox 
+   span name
+     input(type="checkbox", name='name', checked)
+   br
+   span age
+     input(type="checkbox" name='age' checked)
+
+   //- 条件属性
+   - var authenticated = true
+     div(class=authenticated?'authed':'anon')
+   - var currentUrl = '/about'
+     a(class={active: currentUrl==='/'} href='/') Home  
+     a(class={active: currentUrl==='/about'} href='/about') About
+  
+   //- 设置类，id
+   br 
+   br
+   a.link link1
+   a#link link2
+   br
+   a(style={color: 'red', background: 'green'} href='http://www.baidu.com') 百度
+   br
+   br
+   -var attributes = {'data-foo': 'bar'}
+     div#foo(data-bar='foo',style={width: '100px', height: '100px', background:'red'})&attributes(attributes)
+
+   //- for循环
+   -for(var i=0;i<5;i++)
+    li <a>baidu</a>
+
+   - var user = {description: 'foo bar baz'}
+     div#user
+       if user.description
+         h2 Description
+         p.description= user.description
+       else
+         h1 Description
+         p.description User has no description  
+
+   -var con  = false
+     unless con
+       p hello ,world
+
+   - var friends = 10
+     case friends
+       when 0
+         p you have no friends
+       when 1
+         p you have one friends  
+       default
+         p you have #{friends} friends 
+
+   //- 遍历数组
+   ul 
+     each val,index in ['zero', 'one', 'two']
+       li= index + ': '+val    
+
+   -var n = 0
+     ul
+       while n < 10
+         li= n++       
+
+   //- 混合宏
+   mixin list
+     ul 
+       li foo
+       li bar
+       li baz
+   +list
+   
+   mixin pet(name)
+     li.pet= name
+   ul 
+     +pet('cat')
+     +pet('dog')
+
+   mixin list(id, ...items)
+     ul(id=id)
+       each item in items
+         li= item  
+   +list('my-list', 1, 2, 3, 4)      

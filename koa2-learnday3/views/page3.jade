@@ -1,0 +1,17 @@
+extends layout
+
+//- angular 使用多个app
+block content
+  div(ng-app='myApp')
+    div(ng-app='myApp1' ng-controller='myCtrl1')
+        p 我的第一个表达式:{{8+1}}
+
+    div(ng-app='myApp2' ng-controller='myCtrl2' ng-init='quantity=1;cost=5')  
+        p {{quantity+cost}}
+
+    div(ng-app='myApp3' ng-controller='myCtrl3' ng-init="firstName=['zhx','hash','dick']")  
+      ul 
+        li(ng-repeat="x in firstName") {{x}} 
+
+block script
+  script(src="/js/page/page3.js")  
