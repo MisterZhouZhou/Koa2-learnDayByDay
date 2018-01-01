@@ -1,0 +1,71 @@
+extends layout
+  
+block content
+  div(ng-app='myApp')
+    div(ng-app='myApp1' ng-controller='myCtrl1' ng-init="firstName='zw';lastName='mister'")
+      p 姓名：
+        span(ng-bind="firstName+' '+lastName")
+
+    div(ng-app='myApp2' ng-controller='myCtrl2' ng-init="person={firstName:'zw',lastName:'mister'}")  
+      p 姓名：{{person.firstName}}
+
+    div(ng-app='myApp3' ng-controller='myCtrl3' ng-init="points=[1,15,19,2,40]")  
+      p 第三个值为：{{points[2]}} 
+
+    div(ng-app='myApp4' ng-controller='myCtrl4' ng-init="firstName='zw'")   
+      | 在输入框中尝试输入：
+      p 姓名：
+        input(type='text' ng-model='firstName')
+      p 你的输入为： {{firstName}}    
+
+    div(ng-app='myApp5' ng-controller='myCtrl5' ng-init="quantity=1;price=5")
+      h2 价格计算器
+      | 数量：  
+      input(type='text' ng-model='quantity')  
+      | 价格：
+      input(type='text' ng-model='price')     
+      b 总价格：{{quantity * price}}
+
+    div(ng-app='myApp6' ng-controller='myCtrl6' ng-init="names=['Jani','Hege','Kai']")  
+      p 使用ng-repeat来循环数组
+      ul 
+        li(ng-repeat='x in names') {{x}}
+
+    div(ng-app='myApp7' ng-controller='myCtrl7' ng-init="names=[{name:'Jani',country:'Norway'},{name:'Hege',country:'Sweden'},{name:'Kai',country:'Denmark'}]")  
+      p 循环对象
+      ul 
+        li(ng-repeat='x in names') {{x.name+','+x.country}}
+
+    form(ng-app='myApp8' ng-controller='myCtrl8' name='myForm')  
+      | Email:
+      input(type='email' name='myAddress' ng-model='text')
+      span(ng-show="myForm.myAddress.$error.email") 不是一个合法的邮箱地址 
+
+    form(ng-app="" name="myForm" ng-init="myText = 'test@runoob.com'")
+      | Email:
+      input(type='email' name='myAddress' ng-model='myText' required='true')
+      h1 状态
+      {{myForm.myAddress.$valid}}
+      {{myForm.myAddress.$dirty}}
+      {{myForm.myAddress.$touched}}
+      {{myForm.myAddress.$error.email}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+block script
+  script(src="/js/page/page4.js") 
