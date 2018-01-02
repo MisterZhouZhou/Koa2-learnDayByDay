@@ -13,15 +13,30 @@ block css
 // ng-untouched: 控件未失去焦点
 // ng-pending: 任何为满足$asyncValidators的情况
 
+
+// 过滤器
+// uppercase
+// lowercase
+// currency 过滤器将数字格式化为货币格式：
+// orderBy:'country' 排序
+// filter:test. 过滤数据
+
 block content
   div(ng-app='myApp')
     div(ng-app='myApp1' ng-controller='myCtrl1')
       input(ng-model='name')
       h1 {{greeting}}
       button(ng-click='sayHello()') 点我
+      h2 {{locationUrl}}
+      p {{hex}}
+      p {{255 | sayHi}}
 
-    div(ng-app='myApp2' ng-controller='myCtrl2')  
+    div(ng-app='myApp2' ng-controller='myCtrl2')
+      p 姓名为： {{lastName | reverse}}
 
+    div(ng-app='myApp3' ng-controller='myCtrl3')
+      p {{htmlData}}  
+      p {{theTime}} 
 
 
 
