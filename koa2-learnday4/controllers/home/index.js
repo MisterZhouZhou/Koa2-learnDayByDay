@@ -5,7 +5,11 @@ exports.index = async(ctx, next) => {
   }
 
 exports.home = async (ctx, next)=>{
-  ctx.body =  '<h1>HOME page</h1>';
+  // ctx.body =  '<h1>HOME page</h1>';
+  ctx.send({
+    status: 'success',
+    data: 'hello ikcmap'
+  });
 }
 
 
