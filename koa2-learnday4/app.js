@@ -5,6 +5,7 @@ const router = require('./routers');
 
 const middleware = require('./middleware');
 
+// 使用中间件
 middleware(app);
 
 // 设置路由
