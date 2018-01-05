@@ -1,13 +1,11 @@
-const UserService = require('../service/user');
+// const UserService = require('../service/user');
 
 exports.login = async (ctx, next)=>{
+  const { app } = ctx;
   let params = ctx.request.body
   let name = params.name
   let password = params.password
-  let res = await app.service.register(name,password);
-  console.log('======');
-  ctx.body = '1';
-  return;
+  let res = await app.service.user.register(name,password);
   if(res.status == -1){
     await ctx.render("home/login", res.data)
   }else{
@@ -22,7 +20,7 @@ exports.register = async (ctx, next)=>{
   let params = ctx.request.body
   let name = params.name
   let password = params.password
-  let res = await app.service.register(name,password)
+  let res = await app.service.user.register(name,password)
   if(res.status == -1){
     await ctx.render("home/login", res.data)
   }else{
@@ -30,3 +28,4 @@ exports.register = async (ctx, next)=>{
     await ctx.render("home/login", res.data)
   }
 }
+

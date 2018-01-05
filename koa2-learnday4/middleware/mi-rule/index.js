@@ -26,7 +26,6 @@ module.exports = (opts)=>{
         let name = Path.basename(filename, extname);
         //读取文件中的内容并赋值绑定
         content[name] = require(Path.join(path, filename));
-        // console.log(name+'=='+c.index);
       }
     });
     app[name] = content;
