@@ -1,0 +1,30 @@
+extends layout
+
+block css
+  link(rel='stylesheet', href='/css/page8.css')
+  
+block content
+  div(ng-app='myApp')
+    div(ng-app='myApp1' ng-controller='myCtrl1')
+      button(ng-disabled="myswitch") 点我
+      input(type="checkbox" ng-model="myswitch")
+      p {{myswitch}}
+      p 
+        button(disabled)点我
+      p(ng-show="true") 我是可见的
+      p(ng-show="false") 我是不可见的
+      p(ng-hide="true") 我是不可见的
+      p(ng-hide="false") 我是可见的
+    div(ng-app='myApp2' ng-controller='myCtrl2')
+      button(ng-click="toggle()") 隐藏/显示
+      div(ng-hide="myVar")
+        p
+          名: 
+          input(type='text' ng-model="firstName")
+        p 
+          姓名：
+          input(type='text' ng-model="lastName")
+        Full Name: {{firstName+' '+lastName}}
+
+block script
+  script(src="/js/page/page9.js")   

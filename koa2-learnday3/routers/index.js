@@ -1,36 +1,13 @@
 const router = require('koa-router')();
+const dataController = require('../controller/staticdata');
 
 router.get('/welcome',async (ctx, next)=>{
    ctx.body = 'welcome zw'
 });
 
-router.get('/sites', async (ctx, next)=>{
-	let sites = [
-        {
-            "Name": "菜鸟教程",
-            "Url": "www.runoob.com",
-            "Country": "CN"
-        },
-        {
-            "Name": "Google",
-            "Url": "www.google.com",
-            "Country": "USA"
-        },
-        {
-            "Name": "Facebook",
-            "Url": "www.facebook.com",
-            "Country": "USA"
-        },
-        {
-            "Name": "微博",
-            "Url": "www.weibo.com",
-            "Country": "CN"
-        }
-    ]
-	ctx.body = {
-		sites
-	}
-});
+router.get('/sites', dataController.sites);
+
+router.get('/customers', dataController.customers);
 
 
 router.get('/:page',async (ctx, next)=>{
