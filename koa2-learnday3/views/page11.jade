@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div(ng-app='routingDemoApp')
+    h2 AngularJS 路由应用
+    ul
+      li
+        a(href="#/") 首页
+      li
+        a(href="#/computers") 电脑
+      li
+        a(href="#/printers") 打印机
+      li
+        a(href="#/blabla") 其他
+    div(ng-view)
+
+
+block script
+  script(src="http://apps.bdimg.com/libs/angular-route/1.3.13/angular-route.js")
+  script(src="/js/page/page11.js")
+  script(src="/js/page/home/controller.js")
+  script(src="/js/page/computer/controller.js")
