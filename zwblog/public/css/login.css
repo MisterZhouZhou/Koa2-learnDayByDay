@@ -1,0 +1,371 @@
+@media ( min-width: 1200px ) {
+  .container-custom {
+    width: 960px;
+  }
+}
+.main {
+  padding: 60px 0 66px 0;
+  border-top: 1px solid #e9e9e9;
+  /*border-bottom: 1px solid #e9e9e9;*/
+  font-size: 12px;
+}
+.main .user-info {
+  padding: 0 30px;
+}
+.main .login-part {
+  background: #fefefe;
+  border: 1px solid #d5dce5;
+  border-radius:5px;
+  /*border-top: none;*/
+  box-shazdow: 1px 1px 1px #eaeaea;
+}
+.main .login-part h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #4d5e73;
+  padding: 25px 30px 15px 30px;
+}
+.main .line {
+  background: #eee;
+  height: 1px;
+  margin-top: 40px;
+}
+.extends-input,
+.user-name,
+.pass-word {
+  background: #fff;
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  border: 1px solid #d5dce5;
+  margin-bottom: 20px;
+  font-weight: normal;
+  text-indent: 23px;
+  outline: 0;
+  font-size: 1.25em;
+  *line-height: 20px;
+  border-radius:3px;
+}
+.auth-word{
+  width:50%;
+  float:left;
+}
+.auth_wrap{
+  overflow: hidden;
+}
+.gain_auth{
+  display:block;
+  width:40%;
+  float: right;
+  padding:13px 0;
+  text-align:center;
+  font-size:1.25em;
+  color:#fff;
+  cursor:pointer;
+  background-color:#7acf81;
+  border-radius:3px;
+}
+.gain_auth_grey{
+  background-color:#707070;
+}
+
+.mobile-auth{
+  margin:-10px 0 10px 0;
+}
+.mobile-auth span{
+  font-size:14px;
+}
+.mobile-auth .mobile-btn{
+  font-size:14px;
+  color:#428bca;
+}
+
+.extends-input, .validate-code {
+    background: #fff;
+    width: 40%;
+    padding: 8px 0;
+    border: 2px solid #e1e1e1;
+    margin-bottom: 20px;
+    margin-top: 3px;
+    font-weight: normal;
+    text-indent: 20px;
+    outline: 0;
+    font-size: 1.25em;
+}
+.code-img {
+    width: 90px;
+    height: 32px;
+    margin-left: 10px;
+}
+
+.change-code {
+    font-size: 1.1em;
+    color: #999;
+}
+.extends-input:focus,
+.user-name:focus,
+.pass-word:focus,
+.validate-code:focus {
+  border: 1px solid #d6f1ff;
+}
+.error {
+  border: 2px solid #fedddc;
+}
+.user-pass form {
+  margin: 0;
+  padding: 0;
+  padding-right: 8px;
+}
+/*.user-name {
+  background: url("../images/login-locked-icon.png") no-repeat 15px center;
+}*/
+.pass-word {
+  /*background: url("../images/login-key-icon.png") no-repeat 15px center;*/
+  margin-bottom: 0;
+}
+.error-mess {
+  clear:both;
+  background: #fff0f0;
+  border: 1px solid #ffd2d2;
+  height: 26px;
+  line-height: 26px;
+  margin-top: 10px;
+  color: #b74d46;
+  width: 100%;
+}
+.error-mess .error-icon {
+  display: inline-block;
+  /*background: url("../images/login-logic-icons.png") no-repeat 0 0;*/
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin: -4px 5px 0 5px;
+}
+.forget-password {
+  margin-top: 10px;
+  color: #4d5e73;
+  font-size: 1em;
+  *padding: 0 10px;
+}
+.forget-password span {
+  *padding: 0;
+}
+.forget-password input {
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+.forget-password a {
+  color: #4d5e73;
+  text-decoration: none;
+}
+.forget-password a:hover {
+  text-decoration: underline;
+}
+.forget-password .forget {
+  text-align: right;
+}
+.logging {
+  background: #c90a16;
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.5em;
+  text-decoration: none;
+  clear: both;
+  width: 100%;
+  border: solid 1px #c90000;
+  border-radius:3px;
+  box-shadow:0 0 3px #fff inset;
+  /*box-shadow:0 0 30px #e3766b inset;*/
+}
+
+.logging:hover {
+  background: #ba0813;
+  color: #fff;
+  text-decoration: none;
+}
+
+.register-now{
+  padding: 5px 10px 25px 0;
+}
+
+.extends-third-part-icon,
+.third-part .sina,
+.third-part .linkin,
+.third-part .baidu,
+.third-part .qq,
+.third-part .google,
+.third-part .cc,
+.inline-block-part .github,
+.third-part .wechat,
+.third-part .OSC,
+.third-part .show_more{
+  display: inline-block;
+  background-image: url("../image/login-third-party-new.png");
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  width: 32px;
+  height: 32px;
+}
+
+.third-part {
+  max-width: 200px;
+  padding: 20px 52px 35px 0px;
+}
+
+.third-part span {
+  display: block;
+  font-size: 1.083em;
+  color: #666;
+  margin-bottom: 11px;
+}
+.third-part .qq {
+  background-position: 0 0;
+}
+.third-part .wechat {
+  background-position: -37px 0;
+}
+.third-part .sina {
+  background-position: -74px 0;
+}
+.third-part .baidu {
+  background-position: -112px 0;
+}
+.third-part .cc {
+  background-position: -150px 0;
+}
+.third-part .github {
+  background-position: -187px 0;
+}
+.third-part .show_more{
+  background-position:-224px 0;
+}
+.third-part .OSC {
+  background-position: -262px 0;
+}
+
+.third-part .sina,.third-part .baidu,.third-part .cc,.third-part .github,.third-part-new .show_more{
+  display:inline-block;
+}
+.third-part-new .sina,.third-part-new .baidu,.third-part-new .cc,.third-part-new .github{
+  display:inline-block;
+}
+
+.third-part .register-now {
+  margin-top: 20px;
+}
+.third-part .register-now span {
+  display: inline-block;
+}
+.third-part .register-now .register {
+  text-align: right;
+}
+.third-part .register-now .register a {
+  margin-left: 15px;
+}
+
+.wrap-login {
+  display: table;
+  margin: 0 auto;
+}
+.wrap-login .login-banner {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 20px;
+}
+
+.login-banner a img{
+  min-height: 480px;
+}
+
+.wrap-login .login-user {
+  float: left;
+}
+.pub_fo {
+  margin-top: 0 !important;
+}
+
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
+  color:#a2b1c2;
+}
+input:-moz-placeholder,textarea:-moz-placeholder{
+  color:#a2b1c2;
+}
+input::-moz-placeholder,textarea::-moz-placeholder{
+  color:#a2b1c2;
+}
+input:-ms-input-placeholder,textarea:-ms-input-placeholder{
+  color:#a2b1c2;
+}
+
+
+.pub_fo{width:100%; background-color:#fff;margin-top: 10px; overflow:hidden;border-top: 1px solid #f0f0f0}
+.pub_footer_new{width:1170px; overflow: hidden; margin: 0 auto 20px;}
+@media (max-width: 1170px) {
+  .pub_footer_new {
+    width: 98%;
+  }
+}
+
+.union{
+  margin-top: 20px
+}
+
+.union a {
+    color: #666;
+    font-size: 12px;
+    display: inline-block;
+    width: 33.333%;
+}
+
+.union a label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.union a span {
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+}
+
+.union .weixin span {
+    background: #4ccb18;
+}
+
+.fa-tencent-weibo:before{
+  content:"\f1d5"
+}
+.fa-qq:before{
+  content:"\f1d6"
+}
+.fa-wechat:before,.fa-weixin:before{
+  content:"\f1d7";
+}
+
+/**     底部样式    */
+.footer{
+  background: #323436;
+  padding-top: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.footer p{
+  color: white;
+}
+
+.text-center{
+  text-align: center;
+}
+
+

@@ -1,0 +1,31 @@
+extends ../common/layout
+block content
+  div(id="content")
+    div(id="mainContent")
+        article
+            header
+                h2 #{blog.blog_title}
+            p
+                span #{blog.author_name}
+                span #{blog.browse_times} views
+                span #{blog.update_time}
+            p !{blog.blog_content}
+    aside
+      include ../common/aside 
+  include ../common/footer           
+    section
+        div(id='disqus_thread')
+    //-  来必力City版安装代码
+    div(id="lv-container" data-id="city" data-uid="MTAyMC8zMzE0OS85NzA3")
+        script.
+           (function(d, s) {
+               var j, e = d.getElementsByTagName(s)[0];
+               if (typeof LivereTower === 'function') { return; }
+               j = d.createElement(s);
+               j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+               j.async = true;
+               e.parentNode.insertBefore(j, e);
+           })(document, 'script')
+    noscript 为正常使用来必力评论功能请激活JavaScript
+    //- City版安装代码已完成    
+    

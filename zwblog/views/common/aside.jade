@@ -1,0 +1,38 @@
+section
+    h4 Tags
+    div
+        div(id='tags')
+            for item in tags
+                if(item.text == title)
+                  a(href='/tag/#{item.text}' style="background:rgb(119, 86, 40);color: white;padding: 0 5px") #{item.text}
+                    span(style="color:white;") &nbsp;&nbsp;(#{item.value})
+                else 
+                  a(href='/tag/#{item.text}') #{item.text}
+                    span &nbsp;&nbsp;(#{item.value})  
+                br
+section(id="archive")
+    h4 Archives
+    div
+        for archive in archives
+            li
+                a(href='/archive/#{archive}') #{archive}
+section
+    h4 Links
+    div
+        div
+            span Email:
+              a(href="mailto:m15038960016@163.com" style="margin-left:10px;") m15038960016@163.com
+        div
+            span CSDN:  
+              a(href="http://blog.csdn.net/zww1984774346/" style="margin-left:10px;") 小溪彼岸
+        div
+          span Github:
+            a(href="https://github.com/MisterZhouZhou/" style="margin-left:10px;") MisterZhouZhou
+script.
+    $.fn.tagcloud.defaults = {
+    size: {start: 8, end: 24, unit: 'pt'},
+    color: {start: '#009900', end: '#000033'}
+    };
+    $(function () {
+    $('#tags a').tagcloud();
+    });

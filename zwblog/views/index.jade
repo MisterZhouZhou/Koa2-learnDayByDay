@@ -1,0 +1,22 @@
+extends ./common/layout
+block css
+  link(rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css")
+block content
+  div
+    div(class="col-sm-9 col-md-9 col-lg-9")
+      section(style="padding-right:50px;")
+        ul
+          if(articles)
+            for item in articles
+              li.article_list_item_li
+                h4
+                  a(href='/blog/#{item.blogId}') #{item.blog_title}
+                p.article_list_item_p #{item.blog_content}
+                div
+                  span 原创
+                  span(style="margin-left: 10px;") #{item.update_time}
+                  span(style="margin-left: 10px;") 阅读(#{item.browse_times})
+                hr(style="background:lightgray;height:2px")
+    aside(class="col-sm-3 col-md-3 col-lg-3")
+      include common/aside
+  include common/footer

@@ -1,0 +1,8 @@
+header
+  div(id="logo")
+    img(src="/image/rectangle.png")
+  nav(id="")
+    ul
+      for item in config.navs
+        li
+          a(href='#{item.href}') #{item.text}

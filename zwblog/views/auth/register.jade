@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title 账号注册
+    meta(content='text/html;charset=utf-8',http-equiv='Content-Type')
+    meta(name="viewport",content="width=320,maximum-scale=1.3,user-scalable=no")
+    link(rel='icon',href='/image/favicon.ico',type='image/x-icon')
+    link(rel="stylesheet" href="/css/bootstrap.min.css")
+    link(rel='stylesheet', href='/css/login.css')
+    script(src="/js/jquery.min.js")
+    script(src="/js/bootstrap.min.js")
+  body(ng-app="register" ng-controller="registerCtr")
+    div(class="main" style="background:url(/image/login-bg.png)")
+      div(class="container container-custom")
+        div(class="row wrap-login")
+          div(class="login-banner col-sm-6 col-md-7 col-lg-7 hidden-xs")
+            a(href="http://dwz.cn/7bBZZ2" target="_blank")
+              img(src="/image/login-banner.png" class="img-responsive")
+          div(class="login-user col-xs-12 col-sm-6 col-md-5 col-lg-5")
+            div(class="login-part" style="padding-top: 10px;")
+              h3 帐号注册
+              div(class="user-info")
+                div(class="user-pass")
+                  form(style="margin-top: 10px;")
+                    input(id="username" ng-model="account.email" tabindex="1" placeholder="输入邮箱" class="user-name" type="text" value="")
+                    input(id="password" ng-model="account.password" tabindex="2" placeholder="输入密码" class="user-name" type="password" value="" autocomplete="off")
+                    input(id="repassword" ng-model="account.repassword" tabindex="2" placeholder="再次输入密码" class="pass-word" type="password" value="" autocomplete="off")
+                    div.error-mess(ng-show="errMsg")
+                      span.error-icon
+                      span {{errMsg}}
+                    button(class="logging" ng-click="register()") 注册
+                div.line
+                div(class="register-now" style="margin-top: 20px;")
+                    span 已有帐号？
+                    span(class="register tracking-ad" data-mod="popu_28")
+                      a(href="/admin/login" data-kuick="{&quot;act&quot;:&quot;csdn05&quot;,&quot;desc&quot;:&quot;立即注册&quot;}" target="_blank") 立即登录
+    div(class="footer")
+      div(class="container")
+        p(class="text-center")
+          ©2015
+          a(href="#" target="_blank") zw版权所有
+        p(class="text-center")
+          这是末尾
+    script(src='/js/angular.min.js')
+    script(src='/js/register/controller.js')
+    script(src='/js/register/service.js')

@@ -1,0 +1,17 @@
+nav(class="navbar navbar-default")
+  div(class="container-fluid")
+    div(class="collapse navbar-collapse")
+      ul(class="nav navbar-nav")
+        li
+      ul(class="nav navbar-nav navbar-right")
+        li
+          a(ng-if="bodyState!='articleList'" ng-click="actions.articles()" class="btn btn-primary") 文章列表
+          a(ng-if="bodyState=='articleList'" ng-click="actions.articles()" class="btn btn-primary" style="color: #333;background-color: transparent;") 文章列表
+        li
+          a(ng-if="bodyState!='editor'" ng-click="actions.create()" class="btn btn-primary") 新建博客
+          a(ng-if="bodyState=='editor'" ng-click="actions.create()" class="btn btn-primary selected" style="color: #333;background-color: transparent;") 新建博客
+        li
+          a(ng-if="bodyState!='manager'" ng-click="actions.systemConf()" class="btn btn-primary") 系统配置
+          a(ng-if="bodyState=='manager'" ng-click="actions.systemConf()" class="btn btn-primary" style="color: #333;background-color: transparent;") 系统配置
+        li
+          a(ng-click="actions.loginOut()" class="btn btn-primary") 注销

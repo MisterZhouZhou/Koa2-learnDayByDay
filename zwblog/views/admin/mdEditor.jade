@@ -1,0 +1,6 @@
+div(class="btn-group-vertical" style="float:left;")
+  a(class="btn btn-primary" data-toggle="modal" data-target="#articleModal") 发布
+  a(class="btn btn-primary" ng-click="saveBlog()") 保存
+  a(class="btn btn-primary" ng-click="uploadPic()") 插入图片
+  a(class="btn btn-primary") 配置
+div(class="editor" ui-ace="{onLoad : aceLoaded ,mode: 'markdown', theme: 'monokai'}" ng-model="currentBlog.blog_content")

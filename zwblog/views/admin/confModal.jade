@@ -1,0 +1,24 @@
+div(id="articleModal" class="modal fade")
+  div(class="modal-dialog")
+    div(class="modal-content")
+      div(class="modal-header")
+        button(class="close" data-dismiss="modal" aria-hidden="true") ×
+        h4(class="modal-title") 文章配置
+      div(class="modal-body")
+        form(class="form-horizontal")
+          fieldset
+            div(class="form-group")
+              label(class="col-lg-2 control-label") 标题
+              div(class="col-lg-10")
+                input(type="text" class="form-control" id="title" ng-model="currentBlog.blog_title" placeholder="标题")
+            div(class="form-group")
+              label(class="col-lg-2 control-label")分类
+              div(class="col-lg-10")
+                input(type="text" class="form-control" id="category" ng-model="currentBlog.category" placeholder="分类")
+            div(class="form-group")
+              label(class="col-lg-2 control-label")标签
+              div(class="col-lg-10")
+                input(type="text" class="form-control" id="tags" ng-model="currentBlog.tags" placeholder="标签")
+      div(class="modal-footer")
+        button(type="button" class="btn btn-default" data-dismiss="modal") 关闭
+        button(type="button" class="btn btn-primary" data-dismiss="modal" ng-click="actions.createBlog()") 提交更改

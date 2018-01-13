@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title blog manager
+    meta(content='text/html;charset=utf-8',http-equiv='Content-Type')
+    meta(name="author",content="flex")
+    meta(name="viewport",content="width=320,maximum-scale=1.3,user-scalable=no")
+    link(rel='icon',href='/image/favicon.ico',type='image/x-icon')
+    link(rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css")
+    link(rel='stylesheet', href='/admin/css/style.css')
+    script(src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js")
+    script(src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js")
+    script(src="admin/js/angular.min.js")
+  body(ng-app='blogManagePage' ng-controller='blogController')
+    include ./header.jade
+    div(class="container")
+      include ./confModal.jade
+      include ./alertMsg.jade
+      div(ng-switch="bodyState")
+        div(ng-switch-when="articleList")
+          include ./articleList.jade
+        div(ng-switch-when="editor")
+          include ./mdEditor.jade
+        div(ng-switch-when="manager")
+    script(src='admin/js/ace.js')
+    script(src='admin/js/ui-ace.js')
+    script(src="admin/js/app.js")
+    script(src="admin/modules/main/service.js")
+    
+
